@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>Total number of trackers : {{message|length}}</h2>
+    <br>
+    {% for i in range(message|length) %}
+    <div><h3>{{i+1}}.{{message[i][1]}}</h3></div>
+
+   <div> total no of logs entered: {{message[i][2]}}</div>
+    <div>type:{{message[i][0]}}</div>
+    {% if message[i][0]=="boolean" %}
+    <div>possibe values : true,false</div>
+    <br>
+    {% if message[i][3]!="" %}
+    <img src="data:image/png;base64, {{message[i][3]}}"><br>
+    {% else %}
+    <h4>No logs available to plot graph</h4>
+    {% endif %}
+    {% elif message[i][0]=="multichoice" %}
+    <div>possibe values : {{message[i][4]}}</div>
+    <br>
+    {% if message[i][3]!="" %}
+    <img src="data:image/png;base64, {{message[i][3]}}"><br>
+    {% else %}
+    <h4>No logs available to plot graph</h4>
+    {% endif %}
+    {% else %}
+   <div> Maximum value: {{message[i][3]}} </div>
+    <div>Minimum value: {{message[i][4]}}</div>
+    {% endif %}
+
+
+    {% endfor %}
+
+    <div>
+        <h2>{{mot}}</h2>
+    </div>
+</body>
+</html>

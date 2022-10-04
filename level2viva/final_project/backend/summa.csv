@@ -1,0 +1,6 @@
+tid,name,description,types,subs,settings,lastupdatetime
+93,heartrate,for checking heart rate for me,numerical,1,,07/09/2022 07:09 PM
+95,workout,to burn out excess fat from the body,timeduration,1,,31/08/2022 11:14 AM
+96,forgot the key,to check whether i keep  forgetting the keys,boolean,1,,25/09/2022 11:15 AM
+97,day summary,quantifying the days of my life..,multichoice,1,bad;ok;good,07/09/2022 07:34 PM
+111,for_demo,this for demo purpose,numerical,1,,
